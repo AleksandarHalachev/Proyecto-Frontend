@@ -20,7 +20,6 @@ const FormularioLogin = ({ gestionarLogin }) => {
         password: data.password,
       })
       .then((response) => {
-        console.log("Todo correcto", response.data);
         localStorage.setItem(
           "datosUsuario",
           JSON.stringify({
