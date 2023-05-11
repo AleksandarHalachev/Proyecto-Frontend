@@ -20,7 +20,6 @@ const FormularioReg = () => {
         password: data.password,
       })
       .then((response) => {
-        console.log("Todo correcto", response.data);
         navegar("/login");
       })
       .catch((error) => {
