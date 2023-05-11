@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "./ModificarTareas.css";
 
 const ModificarTareas = () => {
   const [titulo, setTitulo] = useState("");
@@ -73,7 +74,7 @@ const ModificarTareas = () => {
       <h1>Modificar tarea</h1>
       {error && <p>{error}</p>}
       {modificado && <p>Tarea modificada correctamente.</p>}
-      <form onSubmit={modificarTarea}>
+      <form onSubmit={modificarTarea} className="formulario-modificar-tarea">
         <label>
           Título:
           <input

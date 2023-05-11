@@ -61,24 +61,30 @@ const Tareas = () => {
         <div className="title">Nueva Tarea</div>
         <div className="inputs">
           <form className="formita" onSubmit={handleSubmit(gestorFormulario)}>
+            <label htmlFor="titulo">Título</label>
             <input
               className="input-form"
               type="text"
+              id="titulo"
               name="titulo"
               placeholder="Título"
               {...register("titulo", { required: true })}
             />
             {errors.titulo && <p>El título es requerido</p>}
+            <label htmlFor="descripcion">Descripción</label>
             <textarea
               className="input-form"
               type="text"
+              id="descripcion"
               name="descripcion"
               placeholder="Descripción"
               {...register("descripcion", { required: true })}
             />
             {errors.descripcion && <p>La descripción es requerida</p>}
+            <label htmlFor="categoria">Categoría</label>
             <select
               className="input-form"
+              id="categoria"
               name="categoria"
               value={categoria}
               onChange={handleChange}
@@ -87,9 +93,11 @@ const Tareas = () => {
               <option value="Trabajo">Trabajo</option>
               <option value="Otros">Otros</option>
             </select>
+            <label htmlFor="fechaExpiracion">Fecha de expiración</label>
             <input
               className="input-form"
               type="date"
+              id="fechaExpiracion"
               name="fechaExpiracion"
               placeholder="Fecha de expiración"
               {...register("fechaExpiracion")}
