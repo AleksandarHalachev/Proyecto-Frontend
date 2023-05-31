@@ -6,6 +6,7 @@ import "./VerTareas.css";
 const VerTareas = () => {
   const [tareas, setTareas] = useState([]);
   const [usuario, setUsuario] = useState([]);
+
   const extraerDatosDeUsuario = () => {
     const datosRecuperar = JSON.parse(localStorage.getItem("datosUsuario"));
     if (datosRecuperar && datosRecuperar.userId) {
